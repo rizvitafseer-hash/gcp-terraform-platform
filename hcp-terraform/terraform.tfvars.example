@@ -1,0 +1,12 @@
+organization        = "my-org"
+vcs_repo_identifier = "my-org/gcp-terraform-platform"
+vcs_oauth_token_id  = "ot-xxxxxxxx"
+
+gcp_workload_provider_name = "projects/123456789/locations/global/workloadIdentityPools/tfc/providers/tfc"
+vault_addr                 = "https://vault.example.com:8200"
+
+environments = {
+  dev     = { project_id = "my-dev-project",  run_service_account = "tfc-dev@my-dev-project.iam.gserviceaccount.com",   auto_apply = true,  branch = "main" }
+  staging = { project_id = "my-stg-project",  run_service_account = "tfc-stg@my-stg-project.iam.gserviceaccount.com",   auto_apply = false, branch = "main" }
+  prod    = { project_id = "my-prod-project", run_service_account = "tfc-prod@my-prod-project.iam.gserviceaccount.com", auto_apply = false, branch = "main" }
+}

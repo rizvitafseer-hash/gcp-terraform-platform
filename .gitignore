@@ -1,0 +1,34 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+tfplan
+*.tfplan
+*.tfplan.json
+
+# Secrets - never commit. Non-secret per-environment values live in
+# environments/*/terraform.tfvars and ARE committed.
+*.secret.tfvars
+*.auto.secret.tfvars
+*.pem
+*.key
+gitkey
+gitkey.*
+id_rsa*
+id_ed25519*
+*.json.key
+.env
+.env.*
+
+# Overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
